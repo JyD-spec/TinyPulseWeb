@@ -1,0 +1,91 @@
+:root {
+    /* Coral del logo → color de marca / títulos */
+    --primary: #FB7185;
+    /* Azul suave del logo → apoyo visual (fondos, detalles) */
+    --secondary: #cce3f5;
+    /* Teal de TC → único acento de acción (botones, hover, links activos) */
+    --accent: #14B8A6;
+    --accent-light: #E6F7F6;
+
+    /* Texto, directamente de TC */
+    --text: #1E293B;
+    --muted: #475569;
+
+    /* Fondo de la app, de TC */
+    --bg: #FFFFFF;
+    --card: #FAF9F6;
+
+    --radius: 24px;
+    --shadow: 0 8px 32px rgba(44, 62, 80, 0.12);
+    --maxw: 900px;
+}
+
+body {
+    background: var(--bg);
+    /* antes: var(--celeste) */
+}
+
+.brand {
+    color: var(--primary);
+    /* antes: #ff6f91 */
+}
+
+.brand-badge {
+    background: linear-gradient(135deg, var(--secondary), var(--primary) 70%);
+    border: 3px solid var(--accent-light);
+    /* antes: cdb4f6 */
+}
+
+.menu a:hover {
+    background: var(--accent);
+    /* antes: var(--primary) */
+    color: #fff;
+}
+
+.hero h1 {
+    color: var(--primary);
+    /* antes: #ff6f91 */
+}
+
+.hero .btn {
+    background: var(--accent);
+    /* antes: #ffb3c6, era rosa */
+    color: #fff;
+}
+
+.hero .btn:hover {
+    background: #0f9c8c;
+    /* teal un poco más oscuro para hover, sin salir de TC */
+}
+
+.info-card {
+    background: var(--card);
+}
+
+.info-card h3 {
+    color: var(--primary);
+    /* antes: #ff6f91 */
+}
+
+.contact-section {
+    background: var(--card);
+}
+
+.contact-section h2 {
+    color: var(--primary);
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+    border: 1.5px solid var(--accent);
+    /* antes: var(--primary) */
+}
+
+.contact-section button {
+    background: var(--accent);
+    /* antes: #ffb3c6 */
+}
+
+.contact-section button:hover {
+    background: #0f9c8c;
+}

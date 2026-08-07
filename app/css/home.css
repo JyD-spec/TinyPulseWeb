@@ -1,0 +1,21 @@
+.home {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px 28px 48px;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.6fr;
+    gap: 24px;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .home-grid {
+        grid-template-columns: 1fr;
+    }
+}

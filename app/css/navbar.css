@@ -1,0 +1,146 @@
+/* ==========================================================================
+   Navbar — usa las variables de color definidas en index.css
+   (--primary, --secondary, --accent, --accent-light, --text, --muted, --card)
+   Este archivo solo aporta estructura y comportamiento, no colores nuevos.
+   ========================================================================== */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--bg);
+    border-bottom: 1px solid var(--secondary);
+    padding: 14px 28px;
+    gap: 24px;
+    font-family: 'Quicksand', Arial, sans-serif;
+}
+
+/* Izquierda: avatar + botón agregar */
+.navbar-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.avatar-badge,
+.add-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: .85rem;
+    flex-shrink: 0;
+}
+
+.avatar-badge {
+    background: var(--accent-light);
+    color: var(--accent);
+    border: 2px solid var(--accent);
+}
+
+.add-badge {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background .18s, transform .08s;
+}
+
+.add-badge:hover {
+    background: #0f9c8c;
+    transform: scale(1.05);
+}
+
+/* Centro: menú */
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar-menu a {
+    text-decoration: none;
+    color: var(--muted);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 6px 2px;
+    position: relative;
+    transition: color .15s;
+}
+
+.navbar-menu a:hover {
+    color: var(--accent);
+}
+
+.navbar-menu a.active {
+    color: var(--text);
+}
+
+.navbar-menu a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 3px;
+    border-radius: 4px;
+    background: var(--accent);
+}
+
+.navbar-disabled {
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 6px 2px;
+    cursor: not-allowed;
+    user-select: none;
+}
+
+/* Derecha: log in / sign up */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.btn {
+    text-align: center;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: .9rem;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+    transition: background .18s, transform .08s, color .18s, border-color .18s;
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid var(--secondary);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.btn-filled {
+    background: var(--primary);
+    color: var(--card);
+}
+
+.btn-filled:hover {
+    transform: scale(1.03);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+    .navbar-menu {
+        display: none;
+    }
+}
